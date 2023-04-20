@@ -1,0 +1,5 @@
+.welcome {
+    background: url("./src/assets/welcome.png") top no-repeat;
+    background-size: contain;
+    height: 793px;
+}

@@ -1,0 +1,54 @@
+:root {
+    --beige: #DCD6C8;
+    --softWhite: #E5E5E5;
+    --softBlack: #313332;
+    --bg: #EBEBEB;
+}
+
+html {
+    background: var(--bg);
+    background-position: center;
+    color: var(--softBlack)
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 120px;
+    margin: 0 auto;
+}
+
+.site-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.content {
+    flex: 1;
+    width: 100%;
+}
+
+.beige-bg {
+    background: var(--beige);
+}
+
+.btn-plain {
+    text-transform: uppercase;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #313332;
+    padding: 15px 0;
+}
+
+.btn-blur {
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px 0;
+    background: transparent;
+    border: 2px solid #E5E5E5;
+    backdrop-filter: blur(10px);
+}

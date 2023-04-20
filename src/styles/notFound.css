@@ -1,0 +1,45 @@
+.centerModal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error404__status {
+    text-transform: uppercase;
+    font-size: 140px;
+}
+
+.error404__content {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.error404__btn{
+    width: 65%;
+}
+
+.homeBtn {
+    padding: 5px 20px ;
+    height: 60px;
+    border-radius: 20px;
+    background-color: #de93a8;
+    font-size: 20px;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: none;
+}
+
+.homeBtn:hover {
+    background-color: #DE416D;
+}
