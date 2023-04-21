@@ -28,8 +28,17 @@ html {
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     width: 100%;
+    gap: 200px;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
 }
 
 .beige-bg {
@@ -39,16 +48,71 @@ html {
 .btn-plain {
     text-transform: uppercase;
     cursor: pointer;
+    text-align: center;
     background: transparent;
     border: 1px solid #313332;
-    padding: 15px 0;
+    padding: 15px 40px;
 }
 
 .btn-blur {
     text-transform: uppercase;
+    text-align: center;
     cursor: pointer;
-    padding: 15px 0;
-    background: transparent;
-    border: 2px solid #E5E5E5;
-    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    border: 1px solid var(--softWhite);
+    color: var(--softWhite);
+    backdrop-filter: blur(2.5px);
+    background-color: rgba(229, 229, 229, 0.1);
+}
+
+.section {
+    grid-column: 2 span;
+    grid-row: auto;
+}
+
+.section__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    align-items: center;
+}
+
+.about:after {
+    grid-column: 2 span;
+    content: '';
+    background-color: black;
+    height: 1px;
+    display: block;
+    bottom: 0;
+}
+
+.title {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 70px;
+}
+
+
+.section__list__item {
+    list-style-image: url("../assets/icons/liItem.svg");
+    padding-left: 15px;
+    margin-left: 20px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    max-width: 85%;
+    color: #000000;
+}
+
+.section__list__item:not(:last-child) {
+    margin-bottom: 35px;
+}
+
+.section__img {
+    width: 100%;
 }

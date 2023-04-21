@@ -1,5 +1,92 @@
 .welcome {
     background: url("./src/assets/welcome.png") top no-repeat;
-    background-size: contain;
-    height: 793px;
+    min-height: 793px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.welcome__title {
+    font-weight: 100;
+    font-size: 96px;
+    letter-spacing: 0.03em;
+    padding-top: 70px;
+    max-width: 500px;
+}
+
+.subtitle {
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.welcome__subtitle {
+    padding-top: 36px;
+}
+
+.welcome__grid {
+
+}
+
+.welcome__btn {
+    grid-column: 1;
+    height: 46px;
+    margin-bottom: 70px;
+}
+
+
+.services__content {
+    grid-template-rows: 500px;
+    grid-auto-rows: 500px;
+}
+
+.services__card {
+    background: no-repeat center rgba(0, 0, 0, 0.25);
+    background-size: cover;
+    width: 100%;
+    min-height: 300px;
+}
+
+.darken-layer {
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--softWhite);
+    width: 100%;
+    height: 100%;
+}
+
+
+.services__title {
+    text-align: center;
+    padding-top: 70px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    max-width: 90%;
+    word-wrap: normal;
+}
+
+.services__button {
+    padding-bottom: 40px;
+    color: var(--softWhite);
+
+}
+
+.order__grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2fr 1fr 50%;
+}
+
+.order__pic {
+    width: 100%;
+    grid-column-start: 3;
+}
+
