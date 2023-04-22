@@ -22,7 +22,7 @@
 }
 
 .footer__arrow {
-    background-image: url("./src/assets/icons/footer-arrow.svg");
+    background-image: url("/src/assets/icons/footer-arrow.svg");
     display: block;
     background-position: right;
     background-repeat: no-repeat;

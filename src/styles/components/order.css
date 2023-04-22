@@ -7,7 +7,7 @@
     font-size: 16px;
     letter-spacing: 0.03em;
     border: none;
-    background: rgba(235, 235, 235, 0.7) url("./src/assets/icons/selectArrow.svg") no-repeat calc(100% - 15px) center;
+    background: rgba(235, 235, 235, 0.7) url("/src/assets/icons/selectArrow.svg") no-repeat calc(100% - 15px) center;
     background-size: 15px 12px;
     appearance: none;
 }
@@ -24,19 +24,26 @@
     font-size: 32px;
     letter-spacing: 0.03em;
     color: var(--softBlack);
-    margin-bottom: 70px;
 }
 
 .order-form__service-title {
+    grid-column: span 2;
     font-weight: 300;
     font-size: 40px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--softBlack);
+    margin-top: 30px;
+}
+
+.order-form__content {
+    /*margin-top: 70px;*/
+    margin-top: calc(100vh/20);
 }
 
 .order-form__step {
-    margin-bottom: 45px;
+    /*margin-bottom: 45px;*/
+    margin-bottom: calc(100vh/35);
 }
 
 .order-from__input {

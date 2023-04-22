@@ -55,14 +55,14 @@
 }
 
 .qna__item__arrow-closed {
-    background: url("./src/assets/icons/selectArrow.svg") no-repeat center;
+    background: url("/src/assets/icons/selectArrow.svg") no-repeat center;
     background-size: cover;
     width: 24px;
     height: 14px;
 }
 
 .qna__item__arrow-opened {
-    background: url("./src/assets/icons/selectArrowBack.svg") no-repeat center;
+    background: url("/src/assets/icons/selectArrowBack.svg") no-repeat center;
     background-size: cover;
     width: 24px;
     height: 14px;

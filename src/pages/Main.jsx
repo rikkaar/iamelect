@@ -118,7 +118,7 @@ const Main = () => {
             <section className={"beige-bg"}>
                 <div className={"order order-container order__grid"}>
                     <div className="order-form__main-page-wrapper">
-                        <OrderFxorm/>
+                        <OrderForm/>
                     </div>
                     <img className={"order__pic"} src={picPayment} alt="Фото с цветами"/>
                 </div>
