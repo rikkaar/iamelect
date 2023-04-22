@@ -19,6 +19,26 @@
     outline: none;
 }
 
+.order-form__title {
+    font-weight: 200;
+    font-size: 32px;
+    letter-spacing: 0.03em;
+    color: var(--softBlack);
+    margin-bottom: 70px;
+}
+
+.order-form__service-title {
+    font-weight: 300;
+    font-size: 40px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--softBlack);
+}
+
+.order-form__step {
+    margin-bottom: 45px;
+}
+
 .order-from__input {
     width: 100%;
     height: 55px;
@@ -34,12 +54,11 @@
 }
 
 .order-from__input:last-child {
-    margin-bottom: 45px;
+    margin-bottom: 0;
 }
 
 .order-from__input:focus {
     outline: none;
-
 }
 
 .order-form__step_info__number {
@@ -56,4 +75,39 @@
 
 .inputError {
     color: #dc4242;
+}
+
+.order-form__btn {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.order-form__result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.order-form__result__title {
+    font-weight: 300;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.order-form__result__price {
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.disabled {
+    background: rgba(0, 0, 0, 0.1);
+    cursor: auto;
+}
+
+.order-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 }

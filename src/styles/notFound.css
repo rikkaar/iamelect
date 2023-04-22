@@ -1,9 +1,11 @@
 .centerModal {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*right: 0;*/
+    /*left: 0;*/
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,10 +23,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
 }
 
 .error404__btn{
+    color: var(--softBlack);
+    border-color: var(--softBlack);
     width: 65%;
 }
 

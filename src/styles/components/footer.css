@@ -1,0 +1,38 @@
+.footer {
+    width: 100%;
+    height: 243px;
+    max-height: 20vh;
+    align-items: center;
+}
+
+.footer__title {
+    font-weight: 300;
+    font-size: 32px;
+    letter-spacing: 0.03em;
+}
+
+.footer__social__link--telegram {
+    width: 39px;
+    height: 32px;
+}
+
+.footer__social__link--whatsapp {
+    width: 39px;
+    height: 39px;
+}
+
+.footer__arrow {
+    background-image: url("./src/assets/icons/footer-arrow.svg");
+    display: block;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 25px;
+    height: 22px;
+}
+
+.footer__social {
+    gap: 36px;
+    justify-content: end;
+    padding-right: 27%;
+}

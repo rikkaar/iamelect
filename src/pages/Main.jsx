@@ -8,8 +8,9 @@ import pic5 from "../assets/IMG_1689.JPG"
 import pic4 from "../assets/IMG_7657.JPG"
 import pic6 from "../assets/IMG_9638.JPG"
 import picPayment from "../assets/IMG_9586.JPG"
-import Select from "../components/Select.jsx";
 import OrderForm from "../components/OrderForm.jsx";
+import {qnaGeneral} from "../consts/qnaConst.jsx";
+import QnaList from "../components/QnaList.jsx";
 
 
 
@@ -115,11 +116,14 @@ const Main = () => {
                 </div>
             </section>
             <section className={"beige-bg"}>
-                <div className={"order container order__grid"}>
-                    <OrderForm/>
+                <div className={"order order-container order__grid"}>
+                    <div className="order-form__main-page-wrapper">
+                        <OrderFxorm/>
+                    </div>
                     <img className={"order__pic"} src={picPayment} alt="Фото с цветами"/>
                 </div>
             </section>
+            <QnaList qnaList={qnaGeneral}/>
         </div>
     );
 };

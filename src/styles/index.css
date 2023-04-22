@@ -3,5 +3,9 @@
 @import "scrollbar.css";
 @import "notFound.css";
 @import "./components/header.css";
+@import "./components/footer.css";
 @import "./components/main.css";
 @import "./components/order.css";
+@import "./components/qna.css";
+
+

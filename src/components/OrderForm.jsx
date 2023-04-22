@@ -20,15 +20,24 @@ const OrderForm = ({serviceId}) => {
     const [phoneError, setPhoneError] = useState("")
     const [emailError, setEmailError] = useState("")
 
+    const [buttonState, setButtonState] = useState(true)
+
     useEffect(() => {
         if (serviceId) {
             setPrice(serviceId)
         }
     }, [serviceId])
 
+    useEffect(() => {
+        if (!nameError && !surnameError && !phoneError && !emailError && price && paymentMethod) {
+            setButtonState(false)
+        }
+        else setButtonState(true)
+    }, [nameError, surnameError, phoneError, emailError, price, paymentMethod])
+
     const validateNotNull = (field, setField) => {
         if (!field) {
-            return setField("поле не заполнено")
+            return setField("поле не заполнено!")
         }
         else return true
     }
@@ -37,7 +46,7 @@ const OrderForm = ({serviceId}) => {
         if (validateNotNull(email, setEmailError))
             if (!email.match(/(?:[a-z0-9+!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/i
         )) {
-            return setEmailError('e-mail некорректен')
+            return setEmailError('e-mail некорректен!')
         } else {
                 setEmailError("")
             }
@@ -45,7 +54,7 @@ const OrderForm = ({serviceId}) => {
 
     const validatePhone = (value) => {
         if (value === '+7') {
-            return setPhoneError('поле не заполнено')
+            return setPhoneError('поле не заполнено!')
         }
         if (!/^[\+7\(\d\d\d\)\s\d\d\d\s\d\d\s\d\d]{17}$/i.test(value)) {
             setPhoneError('Номер телефона некорректен!')
@@ -87,7 +96,11 @@ const OrderForm = ({serviceId}) => {
 
     const validateString = (str, setError) => {
         if (validateNotNull(str, setError))
-            setError("")
+            if (!/[a-zа-яё]/i.test(str)) {
+                setError('поле должно быть символьным!')
+            } else {
+                setError("")
+            }
     }
 
     const onBlurHandler = (e, setDirty, setError) => {
@@ -105,7 +118,6 @@ const OrderForm = ({serviceId}) => {
         setEmailDirty(true)
     }
 
-
     const sendHandler = (e) => {
         e.preventDefault()
         if (price && paymentMethod)
@@ -117,7 +129,7 @@ const OrderForm = ({serviceId}) => {
         <div className="order-form">
             <h2 className={"order-form__title"}>Заявка на услугу:</h2>
             {serviceId
-                ? services[serviceId].name
+                ? <p className={"order-form__service-title"}>services[serviceId].name</p>
                 : <div className={"order-form__step"}>
                     <p className={"order-form__step_info__number"}>01</p>
                     <p className={"order-form__step_info"}>Выберите услуги, которые вас интересуют</p>
@@ -159,10 +171,10 @@ const OrderForm = ({serviceId}) => {
             <div className={"order-form__result"}>
                 <h4 className={"order-form__result__title"}>Сумма</h4>
                 <h4 className={"order-form__result__price"}>{price ? services[price].price : 0} ₽</h4>
-                <h4 className={"order-form__result__price"}>{paymentMethod ? paymentTypes[paymentMethod].link : ""}</h4>
             </div>
             <button
-                className={"order-form__btn btn-plain"}
+                className={buttonState ? "order-form__btn btn-plain disabled" : "order-form__btn btn-plain "}
+                disabled={buttonState}
                 onClick={e => sendHandler(e)}
             >Оплатить
             </button>

@@ -22,48 +22,23 @@
     font-size: 16px;
 }
 
-.social {
-    display: flex;
-    align-items: center;
+.header__social {
     gap: 16px
 }
 
-.pages__item,
-.social__item {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-}
 
-.social__link {
-    display: block;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: opacity 0.3s;
-}
-
-.social__link:hover {
-    opacity: 0.8;
-    transition: opacity 0.3s;
-}
-
-.social__link--instagram {
-    background-image: url("../src/assets/icons/Instagram.svg");
+.header__social__link--instagram {
     width: 15px;
     height: 15px;
 }
 
-.social__link--whatsapp {
-    background-image: url("../src/assets/icons/WhatsApp.svg");
+.header__social__link--whatsapp {
     width: 16px;
     height: 16px;
 }
 
-.social__link--telegram {
-    background-image: url("../src/assets/icons/Telegram.svg");
+.header__social__link--telegram {
     width: 16px;
     height: 13px;
-
 }
+

@@ -1,6 +1,7 @@
 .welcome {
     background: url("./src/assets/welcome.png") top no-repeat;
-    min-height: 793px;
+    /*min-height: 793px;*/
+    height: calc(100vh - 120px);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -76,17 +77,31 @@
 .services__button {
     padding-bottom: 40px;
     color: var(--softWhite);
+    transition: ease-in-out 0.2s;
+}
 
+.services__button:hover {
+    scale: 1.05;
 }
 
 .order__grid {
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 2fr 1fr 50%;
+    grid-template-columns: 120px 2fr 1fr 20px 50%;
+}
+
+.order-form__main-page-wrapper {
+    width: 100%;
+    height: 100%;
+    grid-column-start: 2;
+    /*grid-column-end: 4;*/
+
+    padding-top: 100px;
 }
 
 .order__pic {
-    width: 100%;
-    grid-column-start: 3;
+    align-self: center;
+    justify-self: right;
+    grid-column-start: 5;
+    max-height: 1210px;
 }
 
