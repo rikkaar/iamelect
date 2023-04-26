@@ -1,0 +1,117 @@
+.addons {
+    margin-top: -100px;
+}
+
+.addons__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+
+    margin: 100px auto;
+}
+
+.addons__title {
+    grid-column: 3 span;
+    margin-bottom: 70px;
+}
+
+.addons__item {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.addons__item__text {
+    padding-right: 15%;
+}
+
+.addons__item__marker {
+    width: 22px;
+    height: 19px;
+    flex-shrink: 0;
+    background: url("/src/assets/icons/accept.svg") no-repeat center;
+}
+
+.program__item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    grid-column: span 2;
+    position: relative;
+}
+
+.program__item:not(:last-child) {
+    margin-bottom: 35px;
+}
+
+.program__step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--softWhite);
+    width: 100px;
+    height: 100px;
+    background: var(--beige);
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 24px;
+    flex-shrink: 0;
+    /* identical to box height, or 50% */
+}
+
+.program__title {
+    grid-column: span 3;
+}
+
+.program__item__info {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.program__post-scriptum {
+    grid-column: span 2;
+    width: 70%;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    /* or 150% */
+
+    letter-spacing: 0.01em;
+}
+
+.program__item:after {
+    content: '';
+    background-color: var(--beige);
+    height: 1px;
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.how-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 132px;
+    width: 100%;
+    padding: 0 15%;
+    text-align: center;
+    background: var(--beige);
+}
+
+.how-section {
+    position: relative;
+}
+
+.how-section:not(:last-child):after {
+    content: '';
+    background-color: var(--beige);
+    height: 1px;
+    display: block;
+    width: 20px;
+    right: -20px;
+    position: absolute;
+}

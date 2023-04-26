@@ -1,0 +1,27 @@
+.mentoring {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.service-item__subset {
+    padding-bottom: 20px;
+}
+
+.service-item__subset__length {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+    margin-top: 25px;
+}
+
+.service-item__subset__length-title {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+}
+

@@ -3,7 +3,7 @@ import Select from "./Select.jsx";
 import {services} from "../consts/orderConsts.js";
 import {paymentTypes} from "../consts/orderConsts.js";
 
-const OrderForm = ({serviceId}) => {
+const OrderForm = ({serviceId, preorder}) => {
     const [price, setPrice] = useState(null)
     const [paymentMethod, setPaymentMethod] = useState(null)
     const [name, setName] = useState("")
@@ -30,10 +30,13 @@ const OrderForm = ({serviceId}) => {
     }, [serviceId])
 
     useEffect(() => {
-        if (!nameError && !surnameError && !phoneError && !emailError && price && paymentMethod) {
+        if (!nameError && !surnameError && !phoneError && !emailError && price && paymentMethod && nameDirty && surnameDirty && phoneDirty && emailDirty) {
+            setButtonState(false)
+        }
+        if (preorder && !nameError && !surnameError && !phoneError && !emailError && nameDirty && surnameDirty && phoneDirty && emailDirty) {
             setButtonState(false)
         } else setButtonState(true)
-    }, [nameError, surnameError, phoneError, emailError, price, paymentMethod])
+    }, [nameError, surnameError, phoneError, emailError, price, paymentMethod, preorder])
 
     const validateNotNull = (field, setField) => {
         if (!field) {
@@ -125,7 +128,7 @@ const OrderForm = ({serviceId}) => {
     return (
         <div className="order-form order-form__grid">
             <div className="order-form__head">
-                <h2 className={"order-form__title"}>Заявка на услугу:</h2>
+                <h2 className={"subtitle-font"}>Заявка на услугу:</h2>
                 {serviceId !== undefined
                     ? <p className={"order-form__service-title"}>{services[serviceId].name}</p>
                     : null
@@ -144,7 +147,7 @@ const OrderForm = ({serviceId}) => {
                 }
                 <div className={"order-form__step"}>
                     <p className={"order-form__step_info__number"}>{serviceId !== undefined ? "01" : "02"}</p>
-                    <p className={"order-form__step_info"}>Заполните форму для дальнейшей оплаты</p>
+                    <p className={"order-form__step_info"}>{preorder ? "Оставьте свои контактные данные" : "Заполните форму для дальнейшей оплаты"}</p>
                     {nameError
                         ? <span className={"inputError"}>{nameError}</span> : null}
                     <input className={"order-from__input"} type="text" placeholder={"Ваше имя"}
@@ -166,22 +169,27 @@ const OrderForm = ({serviceId}) => {
                            onChange={e => handleEmailChange(e)} onBlur={e => onBlurEmailHandler(e)} value={email}/>
 
                 </div>
-                <div className={"order-form__step"}>
-                    <p className={"order-form__step_info__number"}>{serviceId !== undefined ? "02" : "03"}</p>
-                    <p className={"order-form__step_info"}>Оплата</p>
-                    <Select type={"payment"} options={paymentTypes}
-                            onChange={payment => setPaymentMethod(payment.target.value)}
-                            placeholder={"Выберите метод оплаты"}/>
-                </div>
-                <div className={"order-form__result"}>
-                    <h4 className={"order-form__result__title"}>Сумма</h4>
-                    <h4 className={"order-form__result__price"}>{price !== null ? services[price].price : 0} ₽</h4>
-                </div>
+                {preorder
+                    ? null
+                    : <>
+                        <div className={"order-form__step"}>
+                            <p className={"order-form__step_info__number"}>{serviceId !== undefined ? "02" : "03"}</p>
+                            <p className={"order-form__step_info"}>Оплата</p>
+                            <Select type={"payment"} options={paymentTypes}
+                                    onChange={payment => setPaymentMethod(payment.target.value)}
+                                    placeholder={"Выберите метод оплаты"}/>
+                        </div>
+                        <div className={"order-form__result"}>
+                            <h4 className={"order-form__result__title"}>Сумма</h4>
+                            <h4 className={"order-form__result__price"}>{price !== null ? services[price].price : 0} ₽</h4>
+                        </div>
+                    </>
+                }
                 <button
-                    className={buttonState ? "order-form__btn btn-plain disabled" : "order-form__btn btn-plain "}
+                    className={buttonState ? "order-form__btn btn-plain btn-font disabled" : "order-form__btn btn-plain btn-font"}
                     disabled={buttonState}
                     onClick={e => sendHandler(e)}
-                >Оплатить
+                >{preorder ? "Записаться" : "Оплатить"}
                 </button>
             </div>
         </div>

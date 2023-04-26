@@ -1,6 +1,4 @@
-.inside__container {
-    grid-column: 2 span;
-}
+
 
 .who__grid {
     display: grid;
@@ -24,10 +22,6 @@
     width: 100%;
     padding: 0 5%;
     text-align: center;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
     border: 1px solid #313332;
 }
 
@@ -41,60 +35,4 @@
     background-size: cover;
 }
 
-.service-price {
-    margin-top: -100px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 15px;
-}
 
-.service-price__title {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-}
-
-.service-price__options {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    align-items: center;
-}
-
-.service-price__option {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 35px 50px;
-    gap: 15px;
-    position: relative;
-}
-
-.service-price__option:after {
-    content: '';
-    background-color: black;
-    height: 1px;
-    display: block;
-    position: absolute;
-    bottom: -10px;
-    width: 100%;
-}
-
-.service-price__option__price {
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 38px;
-    /* identical to box height */
-
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.service-price__option__type {
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    letter-spacing: 0.03em;
-}

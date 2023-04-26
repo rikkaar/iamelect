@@ -7,16 +7,16 @@ const Header = () => {
             <div className="header__container">
                 <ul className={"header__pages pages"}>
                     <li className={"pages__item"}>
-                        <a href="#" className={"pages__link"}>Главная</a>
+                        <a href="#" className={"pages__link body2"}>Главная</a>
                     </li>
                     <li className={"pages__item relative"}>
-                        <a href="#" className={"pages__link"}>Услуги</a>
+                        <a href="#" className={"pages__link body2"}>Услуги</a>
                     </li>
                     <li className={"pages__item"}>
-                        <a href="#" className={"pages__link"}>Оплата</a>
+                        <a href="#" className={"pages__link body2"}>Оплата</a>
                     </li >
                     <li className={"pages__item"}>
-                        <a href="#" className={"pages__link"}>Контакты</a>
+                        <a href="#" className={"pages__link body2"}>Контакты</a>
                     </li>
                 </ul>
                 <ul className="header__social social">

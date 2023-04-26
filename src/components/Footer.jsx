@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <section id={"footer"} className={"beige-bg"}>
             <div className="footer container grid3">
-                <p className={"footer__title"}>Остались вопросы?</p>
+                <p className={"subtitle-font"}>Остались вопросы?</p>
                 <div className="footer__arrow"></div>
                 <ul className="footer__social social">
                     <li className="social__item">

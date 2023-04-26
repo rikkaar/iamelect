@@ -5,11 +5,7 @@
     align-items: center;
 }
 
-.footer__title {
-    font-weight: 300;
-    font-size: 32px;
-    letter-spacing: 0.03em;
-}
+
 
 .footer__social__link--telegram {
     width: 39px;

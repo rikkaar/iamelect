@@ -20,6 +20,7 @@
 }
 
 .qna__item__q {
+    cursor: pointer;
     width: 100%;
     font-weight: 300;
     font-size: 32px;

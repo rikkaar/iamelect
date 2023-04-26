@@ -1,0 +1,153 @@
+@media (max-width: 1024px) {
+    .welcome__btn {
+        grid-column: span 2;
+        max-width: 60%;
+    }
+
+    .section__grid {
+        grid-template-columns: 50px 1fr 1fr 1fr 50px;
+    }
+
+    .container {
+        padding: 0 70px;
+    }
+
+    .content {
+        gap: 100px;
+        margin-bottom: 100px;
+    }
+
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services__content {
+        grid-template-rows: 450px;
+        grid-auto-rows: 450px;
+    }
+
+    .darken-layer {
+        min-height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .title {
+        margin-bottom: 50px;
+    }
+
+    .section__grid {
+        grid-template-columns: 20px 1fr 1fr 1fr 20px;
+    }
+
+    .about__title {
+        text-align: center;
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
+
+    .section__img {
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+
+    .section {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row: auto;
+    }
+
+    .about:after {
+        grid-column-end: 5;
+    }
+
+    .section__list__item {
+        max-width: 100%;
+    }
+
+    .section__list {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services__content {
+        grid-template-rows: 450px;
+        grid-auto-rows: 450px;
+    }
+
+    .darken-layer {
+        min-height: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .section__grid {
+        grid-template-columns: 0px 1fr 1fr 1fr 0px;
+    }
+
+    .h1 {
+        font-weight: 200;
+        font-size: 32px;
+        /*line-height: 38px;*/
+        /* identical to box height */
+
+        letter-spacing: 0.03em;
+    }
+
+    .h2 {
+        font-weight: 300;
+        font-size: 24px;
+        /*line-height: 28px;*/
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+
+    .h3 {
+        font-weight: 400;
+        font-size: 16px;
+        /*line-height: 120%;*/
+        /* or 19px */
+
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    .h4 {
+        font-weight: 300;
+        font-size: 14px;
+        /*line-height: 130%;*/
+        /* or 18px */
+
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+
+    .body1 {
+        font-weight: 300;
+        font-size: 16px;
+        /*line-height: 140%;*/
+        /* or 22px */
+
+        letter-spacing: 0.01em;
+    }
+
+    .subtitle-font {
+        font-weight: 200;
+        font-size: 24px;
+        /*line-height: 28px;*/
+        letter-spacing: 0.03em;
+    }
+}

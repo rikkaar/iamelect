@@ -47,6 +47,79 @@ html {
     background: var(--beige);
 }
 
+.h1 {
+    font-weight: 300;
+    font-size: 96px;
+    /*line-height: 100%;*/
+    /* identical to box height, or 96px */
+
+    letter-spacing: 0.03em;
+}
+
+.h2 {
+    font-weight: 300;
+    font-size: 32px;
+    /*line-height: 38px;*/
+    /* identical to box height */
+
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.h3 {
+    font-weight: 400;
+    font-size: 24px;
+    /*line-height: 32px;*/
+    /* identical to box height, or 133% */
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.h4 {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 150% */
+
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.body1 {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 150% */
+
+    letter-spacing: 0.01em;
+}
+
+.body2 {
+    font-weight: 300;
+    font-size: 16px;
+    /* identical to box height */
+
+    letter-spacing: 0.03em;
+}
+
+.subtitle-font {
+    font-weight: 100;
+    font-size: 32px;
+    /*line-height: 38px;*/
+    /* identical to box height */
+
+    letter-spacing: 0.03em;
+}
+
+.btn-font {
+    font-weight: 500;
+    font-size: 14px;
+    /*line-height: 16px;*/
+    text-transform: uppercase;
+}
+
+
 .btn-plain {
     text-transform: uppercase;
     cursor: pointer;
@@ -54,6 +127,10 @@ html {
     background: transparent;
     border: 1px solid #313332;
     padding: 15px 40px;
+}
+
+.btn-plain:hover {
+    background: rgba(0,0,0, 0.1);
 }
 
 .btn-blur {
@@ -75,6 +152,7 @@ html {
     flex-direction: column;
 }
 
+
 .pages__item:after {
     content: '';
     background-color: var(--softBlack);
@@ -92,6 +170,7 @@ html {
 .social {
     display: flex;
     align-items: center;
+    padding-left: 20px;
 }
 
 .social__link {
@@ -120,20 +199,25 @@ html {
 }
 
 .section {
-    grid-column: 2 span;
+    grid-column-start: 2;
+    grid-column-end: 4;
     grid-row: auto;
 }
 
-.section__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 20px;
 
+.section__grid {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    /*grid-template-columns: repeat(3, 1fr);*/
+    grid-template-columns: 100px 1fr 1fr 1fr 100px;
+    grid-column-gap: 20px;
 }
 
 .about:after {
-    grid-column: 2 span;
     content: '';
+    grid-column-start: 2;
+    grid-column-end: 4;
     background-color: black;
     height: 1px;
     display: block;
@@ -141,25 +225,18 @@ html {
 }
 
 .title {
-    font-weight: 300;
-    font-size: 32px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #000000;
     margin-bottom: 70px;
 }
 
+.inside__container {
+    grid-column: 2 span;
+}
 
 .section__list__item {
     list-style-image: url("../assets/icons/liItem.svg");
     padding-left: 15px;
     margin-left: 20px;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 27px;
-    letter-spacing: 0.01em;
     max-width: 85%;
-    color: #000000;
 }
 
 .section__list__item:not(:last-child) {
@@ -167,9 +244,17 @@ html {
 }
 
 .section__img {
-    width: 100%;
-    max-width: max-content;
-    align-self: end;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 120px);
+    max-height: 800px;
+    height: 100%;
+
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    align-self: start;
 }
 
 .service-item:after {
@@ -191,38 +276,32 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    height: 100%;
     grid-column-start: 3;
-    height: calc(100vh - 120px);
+    min-height: calc(100vh - 120px);
     max-height: 700px;
 }
 
 .service-item__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     grid-column: 2 span;
 }
 
 .service-item__title {
+    margin-top: 100px;
     margin-bottom: 70px;
-    font-weight: 300;
-    font-size: 96px;
-    line-height: 100%;
-    letter-spacing: 0.03em;
-    max-width: 40%;
-}
-
-.service-item__p {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 150%;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+    word-break: break-word;
 }
 
 .service-item__description-container {
     margin-top: 25px;
+    padding-bottom: 25px;
     grid-column-start: 1;
     grid-column-end: 1;
     position: relative;
+    height: 100%;
 }
 
 .service-item__description-container:before {
@@ -235,8 +314,90 @@ html {
     width: 100%;
 }
 
+.service-item__description {
+    height: 100%;
+}
+
 .grid2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+}
+
+.service-price {
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.service-price__title {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.service-price__options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.service-price__option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 50px;
+    gap: 15px;
+    position: relative;
+}
+
+.service-price__option:after {
+    content: '';
+    background-color: black;
+    height: 1px;
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+}
+
+.service-price__option__price {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.service-price__option__type {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.swiper_wrap {
+    width: 80%;
+}
+
+.service-item__ul {
+    margin-top: 65px;
+}
+
+.service-item__li {
+    list-style: disc;
+    padding-left: 5px;
+    margin-left: 20px;
+    text-transform: lowercase;
+    align-self: center;
+}
+
+.carousel__title {
+    text-align: center;
 }

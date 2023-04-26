@@ -19,13 +19,6 @@
     outline: none;
 }
 
-.order-form__title {
-    font-weight: 200;
-    font-size: 32px;
-    letter-spacing: 0.03em;
-    color: var(--softBlack);
-}
-
 .order-form__service-title {
     grid-column: span 2;
     font-weight: 300;

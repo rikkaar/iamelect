@@ -2,11 +2,18 @@
 @import "overall.css";
 @import "scrollbar.css";
 @import "notFound.css";
+
 @import "./components/header.css";
 @import "./components/footer.css";
 @import "./components/main.css";
 @import "./components/order.css";
 @import "./components/qna.css";
 @import "./components/babystyle.css";
+@import "./components/transformation.css";
+@import "./components/wardrobe.css";
+@import "./components/shop_assisstance.css";
+@import "./components/mentoring.css";
+@import "./components/photoshoot.css";
+@import "./media-quiries.css";
 
 
