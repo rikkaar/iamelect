@@ -35,6 +35,6 @@ export const services = [
     },
     {
         name: "Стилизация фотосесии",
-        price: "40.000",
+        price: "3.000",
     },
 ]

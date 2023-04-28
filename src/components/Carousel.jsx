@@ -1,35 +1,52 @@
-import React, {useEffect, useRef} from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import React, {useEffect, useRef, useState} from 'react';
 import { register } from "swiper/element/bundle";
 import 'swiper/css'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import pic1 from "../assets/BabyWatchin.jpg";
-import pic2 from "../assets/IMG_1470.JPG";
-import pic3 from "../assets/IMG_1138.JPG";
-import pic4 from "../assets/IMG_7657.JPG";
-import pic5 from "../assets/IMG_1689.JPG";
-import pic6 from "../assets/IMG_9638.JPG";
 import {ServiceCards} from "./ServiceCards.jsx";
-import Qna from "./Qna.jsx";
 
 const listOfData = ServiceCards
 
 
 register()
 const Carousel = () => {
+    const [windowSize, setWindowSize] = useState(getWindowSize());
+
+    useEffect(() => {
+        function handleWindowResize() {
+            setWindowSize(getWindowSize());
+        }
+
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        };
+    }, []);
+
+    function getWindowSize() {
+        const {innerWidth, innerHeight} = window;
+        return {innerWidth, innerHeight};
+    }
+
+    const [slides, setSlides] = useState(1)
+    useEffect(() => {
+        setSlides(windowSize.innerWidth > 768 ? 3 : windowSize.innerWidth < 600 ? 1 : 2)
+    }, [windowSize])
+
+
     const swiperRef = useRef(null);
 
     useEffect(() => {
         const swiperContainer = swiperRef.current;
         const params = {
-            navigation: true,
-            slidesPerView: 3,
+            navigation: (slides !== 1),
+            pagination: (slides < 3),
+            slidesPerView: slides === 1 ? "auto" : slides,
             spaceBetween: 20,
             injectStyles: [`
-           
+
             .swiper-button-next,
             .swiper-button-prev {
               background-position: center;
@@ -37,6 +54,9 @@ const Carousel = () => {
               background-repeat: no-repeat;
               width: 40px;
               height: 40px;
+            }
+            .swiper-pagination-bullet-active {
+                background-color: #DCD6C8 !important;
             }
             
     
@@ -55,21 +75,20 @@ const Carousel = () => {
             } `,
               ],
         };
-
         Object.assign(swiperContainer, params);
         swiperContainer.initialize();
-    }, []);
+    }, [slides]);
 
     return (
         <section className={"carousel container"}>
-            <h2 className={"title h2 carousel__title"}>Мои услуги</h2>
+            <h2 id={"services"} className={"title h2 carousel__title"}>Мои услуги</h2>
             <swiper-container ref={swiperRef} init="false">
-                {listOfData.map(((slide, index) => {
-                    return (
-                        <swiper-slide key={index}>{slide}</swiper-slide>
-                    )
-                }))}
-            </swiper-container>
+                    {listOfData.map(((slide, index) => {
+                        return (
+                            <swiper-slide key={index}>{slide}</swiper-slide>
+                        )
+                    }))}
+                 </swiper-container>
         </section>
 
 

@@ -21,6 +21,10 @@
     font-size: 16px;
 }
 
+.pages__item {
+    cursor: pointer;
+}
+
 .header__social {
     gap: 16px
 }

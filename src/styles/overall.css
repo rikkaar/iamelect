@@ -36,6 +36,8 @@ html {
     margin-bottom: 200px;
 }
 
+
+
 .grid3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -49,7 +51,7 @@ html {
 
 .h1 {
     font-weight: 300;
-    font-size: 96px;
+    font-size: 92px;
     /*line-height: 100%;*/
     /* identical to box height, or 96px */
 
@@ -187,15 +189,15 @@ html {
 }
 
 .social__link--instagram {
-    background-image: url("../src/assets/icons/Instagram.svg");
+    background-image: url("/src/assets/icons/Instagram.svg");
 }
 
 .social__link--whatsapp {
-    background-image: url("../src/assets/icons/WhatsApp.svg");
+    background-image: url("/src/assets/icons/WhatsApp.svg");
 }
 
 .social__link--telegram {
-    background-image: url("../src/assets/icons/Telegram.svg");
+    background-image: url("/src/assets/icons/Telegram.svg");
 }
 
 .section {
@@ -229,14 +231,18 @@ html {
 }
 
 .inside__container {
-    grid-column: 2 span;
+    grid-column: 3 span;
+    max-width: 80%;
 }
 
 .section__list__item {
-    list-style-image: url("../assets/icons/liItem.svg");
     padding-left: 15px;
     margin-left: 20px;
     max-width: 85%;
+}
+
+.section__list__item::marker {
+    content: url("../assets/icons/liItem.svg");
 }
 
 .section__list__item:not(:last-child) {
@@ -247,8 +253,9 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: calc(100vh - 120px);
-    max-height: 800px;
+    /*min-height: calc(100vh / 2 - 120px);*/
+    min-height: 700px;
+    max-height: 900px;
     height: 100%;
 
     grid-column-start: 4;
@@ -258,7 +265,8 @@ html {
 }
 
 .service-item:after {
-    grid-column: 2 span;
+    grid-column-start: 2;
+    grid-column-end: 4;
     content: '';
     background-color: black;
     height: 1px;
@@ -266,9 +274,16 @@ html {
     bottom: 0;
 }
 
+.service-wrapper {
+    width: 100%;
+    background: transparent;
+}
+
 .service-item__grid {
+    max-width: 1440px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 100px 1fr 1fr 1fr 100px;
     grid-column-gap: 20px;
 }
 
@@ -277,8 +292,10 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    grid-column-start: 3;
+    grid-column-start: 4;
+    grid-column-end: 6;
     min-height: calc(100vh - 120px);
+    /*min-height: calc(100vh - 320px);*/
     max-height: 700px;
 }
 
@@ -286,7 +303,8 @@ html {
     display: flex;
     flex-direction: column;
     height: 100%;
-    grid-column: 2 span;
+    grid-column-start: 2;
+    grid-column-end: 4;
 }
 
 .service-item__title {
@@ -330,6 +348,7 @@ html {
     justify-content: center;
     flex-direction: column;
     gap: 15px;
+    position: relative;
 }
 
 .service-price__title {
@@ -380,6 +399,14 @@ html {
     line-height: 19px;
     text-align: center;
     letter-spacing: 0.03em;
+}
+
+.service-price__ps {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
 .swiper_wrap {

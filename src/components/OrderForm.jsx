@@ -30,13 +30,16 @@ const OrderForm = ({serviceId, preorder}) => {
     }, [serviceId])
 
     useEffect(() => {
-        if (!nameError && !surnameError && !phoneError && !emailError && price && paymentMethod && nameDirty && surnameDirty && phoneDirty && emailDirty) {
-            setButtonState(false)
+            if (preorder) {
+                if (!nameError && !surnameError && !phoneError && !emailError) {
+                    setButtonState(false)
+                } else setButtonState(true)
+            } else if (!nameError && !surnameError && !phoneError && !emailError && price && paymentMethod && surname && phone && email && name) {
+                setButtonState(false)
+            } else setButtonState(true)
         }
-        if (preorder && !nameError && !surnameError && !phoneError && !emailError && nameDirty && surnameDirty && phoneDirty && emailDirty) {
-            setButtonState(false)
-        } else setButtonState(true)
-    }, [nameError, surnameError, phoneError, emailError, price, paymentMethod, preorder])
+        , [nameError, surnameError, phoneError, emailError, price, paymentMethod, preorder, email, name, surname, emailDirty, nameDirty, surnameDirty, phoneDirty]
+    )
 
     const validateNotNull = (field, setField) => {
         if (!field) {
@@ -74,6 +77,7 @@ const OrderForm = ({serviceId, preorder}) => {
         }
         if (phoneFormat(e.target.value).length <= 17) {
             setField(phoneFormat(e.target.value))
+            validatePhone(phoneFormat(e.target.value))
             if (phoneDirty) {
                 validatePhone(phoneFormat(e.target.value))
             }
@@ -82,6 +86,7 @@ const OrderForm = ({serviceId, preorder}) => {
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value)
+        validateEmail(e.target.value)
         if (emailDirty) {
             validateEmail(e.target.value)
         }
@@ -89,6 +94,7 @@ const OrderForm = ({serviceId, preorder}) => {
 
     const handleStrChange = (e, setField, setError, dirty) => {
         setField(e.target.value)
+        validateString(e.target.value, setError)
         if (dirty) {
             validateString(e.target.value, setError)
         }
@@ -114,8 +120,8 @@ const OrderForm = ({serviceId, preorder}) => {
     }
 
     const onBlurEmailHandler = (e) => {
-        validateEmail(e.target.value)
         setEmailDirty(true)
+        validateEmail(e.target.value)
     }
 
     const sendHandler = (e) => {
@@ -130,7 +136,7 @@ const OrderForm = ({serviceId, preorder}) => {
             <div className="order-form__head">
                 <h2 className={"subtitle-font"}>Заявка на услугу:</h2>
                 {serviceId !== undefined
-                    ? <p className={"order-form__service-title"}>{services[serviceId].name}</p>
+                    ? <p className={"order-form__service-title h2"}>{services[serviceId].name}</p>
                     : null
                 }
             </div>
@@ -141,7 +147,8 @@ const OrderForm = ({serviceId, preorder}) => {
                     : <div className={"order-form__step"}>
                         <p className={"order-form__step_info__number"}>01</p>
                         <p className={"order-form__step_info"}>Выберите услуги, которые вас интересуют</p>
-                        <Select type={"service"} options={services} onChange={service => setPrice(service.target.value)}
+                        <Select type={"service"} options={services}
+                                onChange={service => setPrice(service.target.value)}
                                 placeholder={"Выберите услугу"}/>
                     </div>
                 }

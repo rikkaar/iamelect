@@ -8,13 +8,13 @@
 
 
 .footer__social__link--telegram {
-    width: 39px;
-    height: 32px;
+    width: calc(39px * 0.9);
+    height: calc(32px * 0.9);
 }
 
 .footer__social__link--whatsapp {
-    width: 39px;
-    height: 39px;
+    width: calc(40px * 0.9);
+    height:  calc(40px * 0.9);
 }
 
 .footer__arrow {

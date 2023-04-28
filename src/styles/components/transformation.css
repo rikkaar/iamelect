@@ -24,6 +24,7 @@
 
 .addons__item__text {
     padding-right: 15%;
+    width: 100%;
 }
 
 .addons__item__marker {
@@ -57,6 +58,7 @@
     font-size: 48px;
     line-height: 24px;
     flex-shrink: 0;
+    align-self: end;
     /* identical to box height, or 50% */
 }
 
@@ -73,12 +75,6 @@
 .program__post-scriptum {
     grid-column: span 2;
     width: 70%;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 27px;
-    /* or 150% */
-
-    letter-spacing: 0.01em;
 }
 
 .program__item:after {

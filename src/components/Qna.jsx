@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import arrow from "../assets/icons/selectArrow.svg"
 
 const Qna = ({qna}) => {
     const q = qna.q
@@ -10,10 +9,10 @@ const Qna = ({qna}) => {
         <div
             key={q}
             className={"qna__item"}
-            onClick={e => setQnaOpen(!qnaOpen)}
+            onClick={() => setQnaOpen(!qnaOpen)}
         >
             <div className={"qna__item__q__wrapper"}>
-                <h3 className={"qna__item__q"}>{q}</h3>
+                <h3 className={"subtitle-font"}>{q}</h3>
                 <div className={qnaOpen
                     ? "qna__item__arrow qna__item__arrow-opened"
                     : "qna__item__arrow qna__item__arrow-closed"}></div>

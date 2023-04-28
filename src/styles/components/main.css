@@ -1,5 +1,5 @@
 .welcome {
-    background: url("./src/assets/welcome.png") top no-repeat;
+    background: url("/src/assets/welcome.png") center no-repeat;
     height: calc(100vh - 120px);
     min-height: 460px;
     background-size: cover;
@@ -104,44 +104,9 @@
     scale: 1.05;
 }
 
-.order__grid {
-    display: grid;
-    grid-template-columns: 120px 1fr 20px 50%;
-    justify-items: end;
-}
-
-.order-form__grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-}
-.order-form__head {
-    grid-column: 2 span;
-}
-
-.order-form__main-page-wrapper {
+.main__carousel {
     width: 100%;
     height: 100%;
-    min-height: max-content;
-    grid-column: 2;
-    /*grid-column-end: 4;*/
-    padding-top: 50px;
-    padding-bottom: 50px;
+    display: none;
 }
 
-.order__pic {
-    align-self: center;
-    justify-self: right;
-    grid-column-start: 5;
-    max-height: 1210px;
-
-}
-
-.order__pict {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 80%;
-    justify-content: end;
-    grid-column-start: 4;
-    max-height: 100%;
-}
