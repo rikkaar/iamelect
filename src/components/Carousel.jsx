@@ -41,6 +41,7 @@ const Carousel = () => {
     useEffect(() => {
         const swiperContainer = swiperRef.current;
         const params = {
+            freeMode: (slides <= 3),
             navigation: (slides !== 1),
             pagination: true,
             slidesPerView: slides === 1 ? "auto" : slides,
