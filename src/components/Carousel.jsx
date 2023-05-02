@@ -42,7 +42,7 @@ const Carousel = () => {
         const swiperContainer = swiperRef.current;
         const params = {
             navigation: (slides !== 1),
-            pagination: (slides < 3),
+            pagination: true,
             slidesPerView: slides === 1 ? "auto" : slides,
             spaceBetween: 20,
             injectStyles: [`

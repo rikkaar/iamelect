@@ -12,7 +12,7 @@ const AnimatedPage = ({ children }) => {
             initial="initial"
             animate="animate"
             transition={{ duration: 1 }}
-            className={"content"}
+            className={"animated-content"}
         >
             {children}
         </motion.div>

@@ -6,10 +6,14 @@ import Carousel from "../components/Carousel.jsx";
 import AnimatedPage from "../components/AnimatedPage.jsx";
 import pic1 from "@assets/feet.jpg"
 import pic2 from "@assets/glass.jpg"
+import { Helmet } from 'react-helmet';
 
 const PhotoShoot = () => {
     return (
         <AnimatedPage>
+            <Helmet>
+                <title>Стилизация фотосессии</title>
+            </Helmet>
             <div id={"content"} className={"content"}>
                 <div className={"service-wrapper"}>
                     <section className={"service-item service-item__grid"}>
@@ -84,12 +88,12 @@ const PhotoShoot = () => {
                             <span className={"service-price__option__type"}>(за образ)</span>
                         </div>
                     </div>
-                    <span className={"service-price__option__type service-price__ps"}>предоплата 50%</span>
+                    {/*<span className={"service-price__option__type service-price__ps"}>предоплата 50%</span>*/}
                 </section>
                 <section id={"payment"} className={"beige-bg"}>
                     <div className={"order order-container order__grid"}>
                         <div className="order-form__main-page-wrapper">
-                            <OrderForm serviceId={5}/>
+                            <OrderForm serviceId={7}/>
                         </div>
                         <div className="order__pict"
                              style={{backgroundImage: `url(${pic2})`}}>

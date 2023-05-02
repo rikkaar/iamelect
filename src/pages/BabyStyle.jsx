@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import OrderForm from '@components/OrderForm.jsx';
 import QnaList from "@components/QnaList.jsx";
 import {qnaGeneral} from "../consts/qnaConst.jsx";
@@ -6,10 +6,14 @@ import Carousel from "@components/Carousel.jsx";
 import AnimatedPage from "@components/AnimatedPage.jsx";
 import pic1 from "@assets/babyWatchin__page.jpg"
 import pic2 from "@assets/glass.jpg"
+import { Helmet } from 'react-helmet';
 
 const BabyStyle = () => {
     return (
         <AnimatedPage>
+            <Helmet>
+                <title>Стильный малыщ</title>
+            </Helmet>
             <div className={"content"}>
                 <div className={"service-wrapper"}>
                     <section className={"service-item service-item__grid"}>

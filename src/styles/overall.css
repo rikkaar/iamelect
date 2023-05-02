@@ -454,3 +454,10 @@ html {
     background-size: contain;
     transform: rotate(180deg);
 }
+
+.animated-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+}

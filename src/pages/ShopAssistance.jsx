@@ -6,10 +6,14 @@ import Carousel from "../components/Carousel.jsx";
 import AnimatedPage from "../components/AnimatedPage.jsx";
 import pic1 from "@assets/nwaopwnfio.jpg"
 import pic2 from "@assets/glass.jpg"
+import { Helmet } from 'react-helmet';
 
 const ShopAssistance = () => {
     return (
         <AnimatedPage>
+            <Helmet>
+                <title>Шоппинг-сопровождение</title>
+            </Helmet>
             <div className={"content"}>
                 <div className={"service-wrapper"}>
                     <section className={"service-item service-item__grid"}>
@@ -64,7 +68,7 @@ const ShopAssistance = () => {
                 <section id={"payment"} className={"beige-bg"}>
                     <div className={"order order-container order__grid"}>
                         <div className="order-form__main-page-wrapper">
-                            <OrderForm serviceId={3}/>
+                            <OrderForm serviceId={5}/>
                         </div>
                         <div className="order__pict"
                              style={{backgroundImage: `url(${pic2})`}}>

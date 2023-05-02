@@ -10,7 +10,7 @@ import PhotoShoot from "../pages/PhotoShoot.jsx";
 
 
 export const routes = [
-    {path: "/", element: Main},
+    {path: "/", element: Main, title: "хуф"},
     {path: "/service/babystyle", element: BabyStyle},
     {path: "/service/transformation", element: Transformation},
     {path: "/service/wardrobe", element: Wardrobe},

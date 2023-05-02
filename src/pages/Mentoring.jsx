@@ -6,11 +6,14 @@ import Carousel from "../components/Carousel.jsx";
 import AnimatedPage from "../components/AnimatedPage.jsx";
 import pic1 from "@assets/IMG_1689.jpg"
 import pic2 from "@assets/glass.jpg"
-
+import { Helmet } from 'react-helmet';
 
 const Mentoring = () => {
     return (
         <AnimatedPage>
+            <Helmet>
+                <title>Наставничество</title>
+            </Helmet>
             <div className={"content"}>
                 <div className={"service-wrapper"}>
                     <section className={"service-item service-item__grid"}>
@@ -66,18 +69,17 @@ const Mentoring = () => {
                     </div>
                 </section>
                 <section className={"service-price container"}>
-                    <h4 className={"service-price__title"}>Стоимость:</h4>
+                    <h4 className={"service-price__title"}>Как попасть на курс</h4>
                     <div className="service-price__options">
                         <div className="service-price__option">
-                            <h3 className={"service-price__option__price"}>40.000 ₽</h3>
-                            <span className={"service-price__option__type"}>(онлайн)</span>
+                            <h3 className={"service-price__option__price"}>Уже скоро...</h3>
                         </div>
                     </div>
                 </section>
                 <section id={"payment"} className={"beige-bg"}>
                     <div className={"order order-container order__grid"}>
                         <div className="order-form__main-page-wrapper">
-                            <OrderForm serviceId={4} preorder={true}/>
+                            <OrderForm serviceId={6} preorder={true}/>
                         </div>
                         <div className="order__pict"
                              style={{backgroundImage: `url(${pic2})`}}>

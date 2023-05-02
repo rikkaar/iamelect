@@ -383,9 +383,13 @@
     }
 
     .header__container {
-        padding-top: 62px;
+        padding-top: 0;
         padding-bottom: 0;
         width: 100%;
+    }
+
+    .header {
+        height: 70px;
     }
 
     .welcome__title {

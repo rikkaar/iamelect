@@ -3,7 +3,7 @@ import Select from "./Select.jsx";
 import {services} from "../consts/orderConsts.js";
 import {paymentTypes} from "../consts/orderConsts.js";
 
-const OrderForm = ({serviceId, preorder}) => {
+const OrderForm = ({serviceId, preorder, servicesList}) => {
     const [price, setPrice] = useState(null)
     const [paymentMethod, setPaymentMethod] = useState(null)
     const [name, setName] = useState("")
@@ -21,7 +21,12 @@ const OrderForm = ({serviceId, preorder}) => {
     const [emailError, setEmailError] = useState("")
 
     const [buttonState, setButtonState] = useState(true)
+    const [servicesVisible, setServicesVisible] = useState(services)
 
+    useEffect(()=> {
+        if (servicesList)
+            setServicesVisible(servicesList)
+    }, [])
 
     useEffect(() => {
         if (serviceId !== undefined) {
@@ -136,7 +141,7 @@ const OrderForm = ({serviceId, preorder}) => {
             <div className="order-form__head">
                 <h2 className={"subtitle-font"}>Заявка на услугу:</h2>
                 {serviceId !== undefined
-                    ? <p className={"order-form__service-title h2"}>{services[serviceId].name}</p>
+                    ? <p className={"order-form__service-title h2"}>{servicesVisible[serviceId].name}</p>
                     : null
                 }
             </div>
@@ -147,7 +152,7 @@ const OrderForm = ({serviceId, preorder}) => {
                     : <div className={"order-form__step"}>
                         <p className={"order-form__step_info__number"}>01</p>
                         <p className={"order-form__step_info"}>Выберите услуги, которые вас интересуют</p>
-                        <Select type={"service"} options={services}
+                        <Select type={"service"} options={servicesVisible}
                                 onChange={service => setPrice(service.target.value)}
                                 placeholder={"Выберите услугу"}/>
                     </div>
@@ -188,7 +193,7 @@ const OrderForm = ({serviceId, preorder}) => {
                         </div>
                         <div className={"order-form__result"}>
                             <h4 className={"order-form__result__title"}>Сумма</h4>
-                            <h4 className={"order-form__result__price"}>{price !== null ? services[price].price : 0} ₽</h4>
+                            <h4 className={"order-form__result__price"}>{price !== null ? servicesVisible[price].price : 0} ₽</h4>
                         </div>
                     </>
                 }

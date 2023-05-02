@@ -6,10 +6,14 @@ import Carousel from "../components/Carousel.jsx";
 import AnimatedPage from "../components/AnimatedPage.jsx";
 import pic1 from "@assets/IMG_1470.jpg"
 import pic2 from "@assets/glass.jpg"
+import { Helmet } from 'react-helmet';
 
 const Transformation = () => {
     return (
         <AnimatedPage>
+            <Helmet>
+                <title>Клуб преображения</title>
+            </Helmet>
             <div className={"content"}>
                 <div className={"service-wrapper"}>
                     <section className={"service-item service-item__grid"}>
