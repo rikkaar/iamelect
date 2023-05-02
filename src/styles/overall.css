@@ -428,3 +428,29 @@ html {
 .carousel__title {
     text-align: center;
 }
+
+.scrollToTop {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 15px;
+    right: 18px;
+    background-color: rgba(222, 216, 208, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.scroll-arrow {
+    width: 80%;
+    height: 80%;
+    background: url("/src/assets/icons/arrowDown.svg") center no-repeat;
+    background-size: contain;
+    transform: rotate(180deg);
+}

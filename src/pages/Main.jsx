@@ -6,7 +6,8 @@ import {ServiceCards} from "../components/ServiceCards.jsx";
 import Carousel from "../components/Carousel.jsx";
 import AnimatedPage from "../components/AnimatedPage.jsx";
 import { Link as Scroll} from 'react-scroll'
-
+import pic1 from "../assets/IMG_1182.jpg"
+import pic2 from "/src/assets/glass.jpg"
 
 const Main = () => {
     return (
@@ -25,7 +26,7 @@ const Main = () => {
                     <h2 className={"title h2 about__title"}>Обо мне</h2>
                     <div
                         className={"section__img"}
-                        style={{backgroundImage: `url(/src/assets/IMG_1182.jpg)`}}>
+                        style={{backgroundImage: `url(${pic1})`}}>
                     </div>
                     <div className={"about__content section"}>
                         <ul className={"section__list"}>
@@ -71,7 +72,7 @@ const Main = () => {
                             <OrderForm/>
                         </div>
                         <div className="order__pict"
-                             style={{backgroundImage: `url(/src/assets/glass.jpg)`}}>
+                             style={{backgroundImage: `url(${pic2})`}}>
                         </div>
                     </div>
                 </section>

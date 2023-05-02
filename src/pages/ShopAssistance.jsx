@@ -4,7 +4,8 @@ import QnaList from "../components/QnaList.jsx";
 import {qnaGeneral} from "../consts/qnaConst.jsx";
 import Carousel from "../components/Carousel.jsx";
 import AnimatedPage from "../components/AnimatedPage.jsx";
-
+import pic1 from "../assets/nwaopwnfio.jpg"
+import pic2 from "../assets/glass.jpg"
 
 const ShopAssistance = () => {
     return (
@@ -22,7 +23,7 @@ const ShopAssistance = () => {
                         </div>
                         <div
                             className={"service-item__img"}
-                            style={{backgroundImage: `url(/src/assets/nwaopwnfio.jpg)`}}>
+                            style={{backgroundImage: `url(${pic1})`}}>
                         </div>
                     </section>
                 </div>
@@ -66,7 +67,7 @@ const ShopAssistance = () => {
                             <OrderForm serviceId={3}/>
                         </div>
                         <div className="order__pict"
-                             style={{backgroundImage: `url(/src/assets/glass.jpg)`}}>
+                             style={{backgroundImage: `url(${pic2})`}}>
                         </div>
                     </div>
                 </section>

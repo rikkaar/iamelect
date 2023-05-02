@@ -10,6 +10,11 @@
     background: rgba(235, 235, 235, 0.7) url("/src/assets/icons/selectArrow.svg") no-repeat calc(100% - 15px) center;
     background-size: 15px 12px;
     appearance: none;
+    color: var(--softBlack);
+}
+
+.selector__option {
+    color: var(--softBlack);
 }
 
 .selector:focus {

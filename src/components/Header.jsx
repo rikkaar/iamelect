@@ -20,13 +20,13 @@ const Header = () => {
                 </ul>
                 <ul className="header__social social">
                     <li className="social__item">
-                        <Link to={"/"} className="social__link social__link--instagram header__social__link--instagram" aria-label="Перейти в инстаграм"></Link>
+                        <Link to={"https://instagram.com/azarian_katerina?"} target="_blank" className="social__link social__link--instagram header__social__link--instagram" aria-label="Перейти в инстаграм"></Link>
                     </li>
                     <li className="social__item">
-                        <Link to={"/"} className="social__link social__link--whatsapp header__social__link--whatsapp" aria-label="Перейти в ватсап"></Link>
+                        <Link to={"https://api.whatsapp.com/send?phone=79875369977"} target="_blank" className="social__link social__link--whatsapp header__social__link--whatsapp" aria-label="Перейти в ватсап"></Link>
                     </li>
                     <li className="social__item">
-                        <Link to={"/"} className="social__link social__link--telegram header__social__link--telegram" aria-label="Перейти в телеграм"></Link>
+                        <Link to={"https://t.me/iamelect"} target="_blank" className="social__link social__link--telegram header__social__link--telegram" aria-label="Перейти в телеграм"></Link>
                     </li>
                 </ul>
             </div>

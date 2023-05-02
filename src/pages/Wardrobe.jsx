@@ -4,7 +4,8 @@ import QnaList from "../components/QnaList.jsx";
 import {qnaGeneral} from "../consts/qnaConst.jsx";
 import Carousel from "../components/Carousel.jsx";
 import AnimatedPage from "../components/AnimatedPage.jsx";
-
+import pic1 from "../assets/whiteasd.jpg"
+import pic2 from "../assets/glass.jpg"
 
 const Wardrobe = () => {
     return (
@@ -22,7 +23,7 @@ const Wardrobe = () => {
                         </div>
                         <div
                             className={"service-item__img"}
-                            style={{backgroundImage: `url(/src/assets/whiteasd.jpg)`}}>
+                            style={{backgroundImage: `url(${pic1})`}}>
                         </div>
                     </section>
                 </div>
@@ -64,13 +65,42 @@ const Wardrobe = () => {
                         </div>
                     </div>
                 </section>
+                <section className={"consult beige-bg"}>
+                    <section className="inside container grid3">
+                        <div className="inside__container">
+                            <h2 className={"title h2"}>Консультация по вашему гардеробу</h2>
+                            <ul className={"section__list"}>
+                                <li className={"section__list__item body1"}>
+                                    Созвон на 1,5 часа по видео
+                                </li>
+                                <li className={"section__list__item body1"}>
+                                    Вы можете задавать любые вопросы по вашему гардеробу, фасонам, сочетаниям, цветам и тд
+                                </li>
+                                <li className={"section__list__item body1"}>
+                                    Обратная связь в течение недели (можете присылать свои образы и я буду комментировать и давать советы)
+                                </li>
+                                <li className={"section__list__item body1"}>
+                                    Я не составляю вам шоппинг лист и капсулу в отличие от полного разбора гардероба
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section className={"service-price container"}>
+                        <h4 className={"service-price__title"}>Стоимость:</h4>
+                        <div className="service-price__options">
+                            <div className="service-price__option">
+                                <h3 className={"service-price__option__price"}>2.900 ₽</h3>
+                            </div>
+                        </div>
+                    </section>
+                </section>
                 <section id={"payment"} className={"beige-bg"}>
                     <div className={"order order-container order__grid"}>
                         <div className="order-form__main-page-wrapper">
                             <OrderForm serviceId={2}/>
                         </div>
                         <div className="order__pict"
-                             style={{backgroundImage: `url(/src/assets/glass.jpg)`}}>
+                             style={{backgroundImage: `url(${pic2})`}}>
                         </div>
                     </div>
                 </section>

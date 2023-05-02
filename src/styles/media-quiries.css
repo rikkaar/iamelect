@@ -31,6 +31,10 @@
         margin-bottom: 100px;
     }
 
+    .consult {
+        gap: 100px;
+    }
+
     .service-price {
         margin-top: -50px;
         gap: 0;
@@ -87,6 +91,10 @@
     .section__grid,
     .service-item__grid {
         grid-template-columns: 20px 1fr 1fr 1fr 20px;
+    }
+
+    .service-price__options {
+        flex-direction: column;
     }
 
     .about__title {
@@ -427,12 +435,15 @@
         max-width: 70%;
     }
 
-
-
     .block-section,
     .how-section {
         grid-column: 3 span;
         max-width: 100%;
+    }
+
+    .scrollToTop {
+        width: 50px;
+        height: 50px;
     }
 }
 

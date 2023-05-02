@@ -4,7 +4,8 @@ import QnaList from "../components/QnaList.jsx";
 import {qnaGeneral} from "../consts/qnaConst.jsx";
 import Carousel from "../components/Carousel.jsx";
 import AnimatedPage from "../components/AnimatedPage.jsx";
-
+import pic1 from "../assets/IMG_1470.JPG"
+import pic2 from "../assets/glass.jpg"
 
 const Transformation = () => {
     return (
@@ -33,7 +34,7 @@ const Transformation = () => {
                         </div>
                         <div
                             className={"service-item__img"}
-                            style={{backgroundImage: `url(/src/assets/IMG_1470.JPG)`}}>
+                            style={{backgroundImage: `url(${pic1})`}}>
                         </div>
                     </section>
                 </div>
@@ -146,7 +147,7 @@ const Transformation = () => {
                             <OrderForm serviceId={1} preorder={true}/>
                         </div>
                         <div className="order__pict"
-                             style={{backgroundImage: `url(/src/assets/glass.jpg)`}}>
+                             style={{backgroundImage: `url(${pic2})`}}>
                         </div>
                     </div>
                 </section>

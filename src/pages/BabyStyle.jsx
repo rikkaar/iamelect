@@ -4,8 +4,10 @@ import QnaList from "../components/QnaList.jsx";
 import {qnaGeneral} from "../consts/qnaConst.jsx";
 import Carousel from "../components/Carousel.jsx";
 import AnimatedPage from "../components/AnimatedPage.jsx";
-const BabyStyle = () => {
+import pic1 from "../assets/babyWatchin__page.jpg"
+import pic2 from "../assets/glass.jpg"
 
+const BabyStyle = () => {
     return (
         <AnimatedPage>
             <div className={"content"}>
@@ -21,7 +23,7 @@ const BabyStyle = () => {
                         </div>
                         <div
                             className={"service-item__img"}
-                            style={{backgroundImage: `url(/src/assets/babyWatchin__page.jpg)`}}>
+                            style={{backgroundImage: `url(${pic1})`}}>
                         </div>
                     </section>
                 </div>
@@ -81,7 +83,7 @@ const BabyStyle = () => {
                             <OrderForm serviceId={0}/>
                         </div>
                         <div className="order__pict"
-                             style={{backgroundImage: `url(/src/assets/glass.jpg)`}}>
+                             style={{backgroundImage: `url(${pic2})`}}>
                         </div>
                     </div>
                 </section>
