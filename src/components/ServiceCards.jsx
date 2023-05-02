@@ -1,9 +1,9 @@
-import pic1 from "../assets/BabyWatchin.jpg";
-import pic2 from "../assets/IMG_1470.JPG";
-import pic3 from "../assets/whiteasd.jpg";
-import pic4 from "../assets/glass.jpg";
-import pic5 from "../assets/IMG_1689.JPG";
-import pic6 from "../assets/feet.jpg";
+import pic1 from "@assets/BabyWatchin.jpg";
+import pic2 from "@assets/IMG_1470.JPG";
+import pic3 from "@assets/whiteasd.jpg";
+import pic4 from "@assets/glass.jpg";
+import pic5 from "@assets/IMG_1689.JPG";
+import pic6 from "@assets/feet.jpg";
 import React from "react";
 import { HashLink as Link } from 'react-router-hash-link';
 

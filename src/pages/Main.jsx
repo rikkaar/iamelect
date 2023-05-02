@@ -6,8 +6,8 @@ import {ServiceCards} from "../components/ServiceCards.jsx";
 import Carousel from "../components/Carousel.jsx";
 import AnimatedPage from "../components/AnimatedPage.jsx";
 import { Link as Scroll} from 'react-scroll'
-import pic1 from "../assets/IMG_1182.jpg"
-import pic2 from "../assets/glass.jpg"
+import pic1 from "@assets/IMG_1182.jpg"
+import pic2 from "@assets/glass.jpg"
 
 const Main = () => {
     return (

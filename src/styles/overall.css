@@ -242,7 +242,7 @@ html {
 }
 
 .section__list__item::marker {
-    content: url("../assets/icons/liItem.svg");
+    content: url("/src/assets/icons/liItem.svg");
 }
 
 .section__list__item:not(:last-child) {

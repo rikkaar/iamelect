@@ -1,11 +1,11 @@
 import React from 'react';
-import OrderForm from "../components/OrderForm.jsx";
-import QnaList from "../components/QnaList.jsx";
+import OrderForm from '@components/OrderForm.jsx';
+import QnaList from "@components/QnaList.jsx";
 import {qnaGeneral} from "../consts/qnaConst.jsx";
-import Carousel from "../components/Carousel.jsx";
-import AnimatedPage from "../components/AnimatedPage.jsx";
-import pic1 from "../assets/babyWatchin__page.jpg"
-import pic2 from "../assets/glass.jpg"
+import Carousel from "@components/Carousel.jsx";
+import AnimatedPage from "@components/AnimatedPage.jsx";
+import pic1 from "@assets/babyWatchin__page.jpg"
+import pic2 from "@assets/glass.jpg"
 
 const BabyStyle = () => {
     return (
