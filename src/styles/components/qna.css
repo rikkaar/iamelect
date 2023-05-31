@@ -4,11 +4,13 @@
 
 .qna__item {
     position: relative;
-    width: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .qna__item__q__wrapper {
@@ -43,7 +45,7 @@
     height: 1px;
     position: absolute;
     display: block;
-    bottom: -40px;
+    bottom: -20px;
 }
 
 .qna__item__arrow {

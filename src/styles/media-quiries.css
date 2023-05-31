@@ -303,6 +303,12 @@
     .program__item__info {
         padding: 0 0 5px 40px;
     }
+
+    .qna__item {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 @media (max-width: 480px) {

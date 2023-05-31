@@ -5,8 +5,8 @@ import { Link as Scroll} from 'react-scroll'
 
 const Header = () => {
     return (
-        <header id={"header"} className={"header container"}>
-            <div className="header__container">
+        <header id={"header"} className={"beige-bg"} style={{marginBottom: "10px"}}>
+            <div className="header__container header container">
                 <ul className={"header__pages pages"}>
                     <li className={"pages__item"}>
                         <Link to={"/"} className={"pages__link body2"}>Главная</Link>
